@@ -30,7 +30,7 @@
                     <a href="screenshot.html">Screenshot</a>
                     <a href="vacation.html">Vacation</a>
                     <a href="#">Tips and Trick</a>
-                    <a href="joinus.html">Join Us</a>
+                    <a href="#">Join Us</a>
                 </div>
             </div>
         </div>
@@ -38,64 +38,57 @@
 
     <div class="page-header">
         <div class="page-header-content">
-            <h3>SCREENSHOT</h3>
+            <h3>JOIN US</h3>
             <div class="detail-header">
                 <p><a href="../index.html">HOME</a></p>
                 <i class="fas fa-angle-double-right"></i>
-                <p>SCREENSHOT</p>
+                <p>JOIN US</p>
             </div>
         </div>
     </div>
 
-    <div class="screenshot-container">
+    <div class="registration-container">
         <div class="title">
-            <h4>DESTINATION</h4>
-            <h1>Explore Top Destination</h1>
+            <h4>Join Us</h4>
+            <h1>Register yourself now!</h1>
         </div>
-        <div class="grid-container">
-            <div class="grid-item">
-                <img src="../img/destination-1.jpg" alt="Gambar 1">
-                <div class="caption">
-                    <h5>Candi Borobudur</h1>
-                        <p>Magelang, Indonesia</p>
-                </div>
+        <form class="registration-form" id="registration-form" action="#" method="post" onsubmit="return validateForm()"
+            novalidate>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username">
+                <i id="username-error-icon" class="fas fa-exclamation-triangle error-icon hidden"></i>
+                <span id="username-error" class="error"></span>
             </div>
-            <div class="grid-item">
-                <img src="../img/destination-2.jpg" alt="Gambar 2">
-                <div class="caption">
-                    <h5>Batu Caves</h1>
-                        <p>Selangor, Malaysia</p>
-                </div>
+            <div class="form-group">
+                <label for="fullname">Fullname</label>
+                <input type="text" id="fullname" name="fullname">
+                <i id="fullname-error-icon" class="fas fa-exclamation-triangle error-icon hidden"></i>
+                <span id="fullname-error" class="error"></span>
             </div>
-            <div class="grid-item">
-                <img src="../img/destination-3.jpg" alt="Gambar 3">
-                <div class="caption">
-                    <h5>Great Wall of China</h1>
-                        <p>Huairou District, Tiongkok</p>
-                </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+                <i id="email-error-icon" class="fas fa-exclamation-triangle error-icon hidden"></i>
+                <span id="email-error" class="error"></span>
             </div>
-            <div class="grid-item">
-                <img src="../img/destination-4.jpg" alt="Gambar 4">
-                <div class="caption">
-                    <h5>The Grand Palace</h1>
-                        <p>Phra Nakhon, Thailand</p>
-                </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+                <i id="password-error-icon" class="fas fa-exclamation-triangle error-icon hidden"></i>
+                <span id="password-error" class="error"></span>
             </div>
-            <div class="grid-item">
-                <img src="../img/destination-5.jpg" alt="Gambar 5">
-                <div class="caption">
-                    <h5>Chapel Bridge</h1>
-                        <p>Luzern, Swiss</p>
-                </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <textarea id="address" name="address" rows="4"></textarea>
+                <i id="address-error-icon" class="fas fa-exclamation-triangle error-icon hidden"></i>
+                <span id="address-error" class="error"></span>
             </div>
-            <div class="grid-item">
-                <img src="../img/destination-6.jpg" alt="Gambar 6">
-                <div class="caption">
-                    <h5>Big Ben</h1>
-                        <p>Westminster, London</p>
-                </div>
+            <div class="center-button">
+                <button type="submit">Submit</button>
             </div>
-        </div>
+        </form>
+
     </div>
 
     <footer>
