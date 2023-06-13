@@ -40,5 +40,5 @@ window.onclick = function (e) {
 };
 
 function goScreenshot() {
-  window.location.href = "../html/screenshot.html";
+  window.location.href = "html/screenshot.html";
 }
