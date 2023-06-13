@@ -12,13 +12,14 @@ button {
 }
 body {
   font-family: "Poppins", sans-serif;
+  background-color: #f0f0f0;
 }
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: fixed;
-  background-color: #ffffff;
+  background-color: #f0f0f0;
   top: 0;
   left: 0;
   width: 100%;
@@ -274,7 +275,8 @@ footer {
   color: white;
 }
 
-.screenshot-container {
+.screenshot-container,
+.vacation-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -282,20 +284,23 @@ footer {
   padding: 5rem 0;
 }
 
-.screenshot-container .title {
+.screenshot-container .title,
+.vacation-container .title {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 3rem;
 }
 
-.screenshot-container .title h4 {
+.screenshot-container .title h4,
+.vacation-container .title h4 {
   color: #7ab730;
   letter-spacing: 0.4rem;
   font-weight: 500;
 }
 
-.screenshot-container .title h1 {
+.screenshot-container .title h1,
+.vacation-container .title h1 {
   font-size: 2.5rem;
 }
 
@@ -351,6 +356,48 @@ footer {
 .grid-item:hover img {
   transform: scale(1.2);
   transition: transform 0.5s;
+}
+
+.card-container {
+  margin: 0 20rem;
+  background-color: rgb(248, 248, 248);
+  box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.123);
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+.card-container:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s;
+}
+.card {
+  display: flex;
+  gap: 20px;
+  padding: 1.5rem;
+  align-items: center;
+}
+.card img {
+  vertical-align: middle;
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.card .right {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+}
+
+.card .right h4 {
+  font-weight: 500;
+  color: #7ab730;
+}
+
+.card .right p {
+  margin-top: 0.5rem;
 }
 
 @media only screen and (max-width: 1300px) {
