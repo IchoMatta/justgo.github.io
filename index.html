@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUSTGO</title>
+    <script src="/js/script.js" defer></script>
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div class="left">
+            <a href="#">
+                <h1><span>JUST</span>GO</h1>
+            </a>
+        </div>
+        <div class="right">
+            <div class="dropdown">
+                <button class="dropBtn" onclick="dropdownMenu()">Menu
+                    <i class="fas fa-sort-down"></i>
+                </button>
+                <div class="dropdown-list">
+                    <a href="index.html">Home</a>
+                    <a href="/html/screenshot.html">Screenshot</a>
+                    <a href="#">Vacation</a>
+                    <a href="#">Join Us</a>
+                    <a href="#">Tips and Trick</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="image-slider">
+        <figure>
+            <div id="img" class="active">
+                <img src="/img/carousel-1.jpg" alt="image1" width="100%">
+                <div class="content">
+                    <h1>Let's Discover The World Together</h1>
+                    <button onclick="goScreenshot()">Explore Now</button>
+                </div>
+            </div>
+            <div id="img">
+                <img src="/img/carousel-2.jpg" alt="image2" width="100%">
+                <div class="content">
+                    <h1>Discover Amazing Places With Us</h1>
+                    <button onclick="goScreenshot()">Explore Now</button>
+                </div>
+            </div>
+        </figure>
+        <i class="btn-prev fas fa-chevron-left"></i>
+        <i class="btn-next fas fa-chevron-right"></i>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <h1><span>JUST</span>GO</h1>
+            <div class="social-media">
+                <h4>FOLLOW US</h4>
+                <div class="social-media-icon">
+                    <div class="icon">
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                    <div class="icon">
+                        <i class="fab fa-facebook"></i>
+                    </div>
+                    <div class="icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <div class="icon">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
