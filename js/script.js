@@ -57,12 +57,11 @@ function validateForm() {
   var usernameError = document.getElementById("username-error");
   var usernameErrorIcon = document.getElementById("username-error-icon");
   if (username === "") {
-    usernameError.textContent = "Username harus diisi";
+    usernameError.textContent = "Please fill out this field";
     usernameErrorIcon.classList.remove("hidden");
     isValid = false;
   } else if (username.length < 4 || username.length > 20) {
-    usernameError.textContent =
-      "Username harus terdiri dari 4 hingga 20 karakter";
+    usernameError.textContent = "Username must be 4 to 20 characters";
     usernameErrorIcon.classList.remove("hidden");
     isValid = false;
   } else {
@@ -74,17 +73,15 @@ function validateForm() {
   var fullnameError = document.getElementById("fullname-error");
   var fullnameErrorIcon = document.getElementById("fullname-error-icon");
   if (fullname === "") {
-    fullnameError.textContent = "Nama lengkap harus diisi";
+    fullnameError.textContent = "Please fill out this field";
     fullnameErrorIcon.classList.remove("hidden");
     isValid = false;
   } else if (fullname.length < 2 || fullname.length > 50) {
-    fullnameError.textContent =
-      "Fullname harus terdiri dari 2 hingga 50 karakter";
+    fullnameError.textContent = "Fullname must be 2 to 50 characters";
     isValid = false;
     fullnameErrorIcon.classList.remove("hidden");
   } else if (!isValidFullnameCharacters(fullname)) {
-    fullnameError.textContent =
-      "Fullname hanya boleh terdiri dari huruf dan spasi";
+    fullnameError.textContent = "Fullname alphabets only";
     isValid = false;
     fullnameErrorIcon.classList.remove("hidden");
   } else {
@@ -96,14 +93,14 @@ function validateForm() {
   var emailError = document.getElementById("email-error");
   var emailErrorIcon = document.getElementById("email-error-icon");
   if (email === "") {
-    emailError.textContent = "Email harus diisi";
+    emailError.textContent = "Please fill out this field";
     isValid = false;
     emailErrorIcon.classList.remove("hidden");
   } else if (
     email.indexOf("@gmail.com") === -1 &&
     email.indexOf("@binus.edu") === -1
   ) {
-    emailError.textContent = "Email harus @gmail.com atau @binus.edu";
+    emailError.textContent = "Email must be in @gmail.com or @binus.edu";
     isValid = false;
     emailErrorIcon.classList.remove("hidden");
   } else {
@@ -115,15 +112,15 @@ function validateForm() {
   var passwordError = document.getElementById("password-error");
   var passwordErrorIcon = document.getElementById("password-error-icon");
   if (password === "") {
-    passwordError.textContent = "Password harus diisi";
+    passwordError.textContent = "Please fill out this field";
     isValid = false;
     passwordErrorIcon.classList.remove("hidden");
   } else if (password.length < 8) {
-    passwordError.textContent = "Password harus lebih dari 8";
+    passwordError.textContent = "The password must be at least 8 characters";
     isValid = false;
     passwordErrorIcon.classList.remove("hidden");
   } else if (!hasNumber(password)) {
-    passwordError.textContent = "Password harus ada angka";
+    passwordError.textContent = "Password must contain number";
     isValid = false;
     passwordErrorIcon.classList.remove("hidden");
   } else {
@@ -136,11 +133,11 @@ function validateForm() {
   var addressErrorIcon = document.getElementById("address-error-icon");
   var wordCount = countWords(address);
   if (address === "") {
-    addressError.textContent = "Alamat harus diisi";
+    addressError.textContent = "Please fill out this field";
     isValid = false;
     addressErrorIcon.classList.remove("hidden");
   } else if (wordCount > 20) {
-    addressError.textContent = "Alamat tidak boleh lebih dari 20 kata";
+    addressError.textContent = "Address must be less than 20 words";
     isValid = false;
     addressErrorIcon.classList.remove("hidden");
   } else {
