@@ -29,9 +29,15 @@ $(document).ready(function () {
 function dropdownMenu() {
   document.querySelector(".dropdown-list").classList.toggle("show");
 }
+function screenshotMenu() {
+  document.querySelector(".screenshot-list").classList.toggle("show");
+}
+function subMenu() {
+  document.querySelector(".submenu-list").classList.toggle("show");
+}
 
 window.onclick = function (e) {
-  if (!e.target.matches(".dropBtn")) {
+  if (!e.target.matches(".dropBtn") && !e.target.matches(".subBtn")) {
     var dropdownList = document.querySelector(".dropdown-list");
     if (dropdownList.classList.contains("show")) {
       dropdownList.classList.remove("show");
