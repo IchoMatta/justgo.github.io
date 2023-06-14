@@ -277,7 +277,8 @@ footer {
 
 .screenshot-container,
 .vacation-container,
-.registration-container {
+.registration-container,
+.tips-trick-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -291,7 +292,8 @@ footer {
 
 .screenshot-container .title,
 .vacation-container .title,
-.registration-container .title {
+.registration-container .title,
+.tips-trick-container .title {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -300,7 +302,8 @@ footer {
 
 .screenshot-container .title h4,
 .vacation-container .title h4,
-.registration-container .title h4 {
+.registration-container .title h4,
+.tips-trick-container .title h4 {
   color: #7ab730;
   letter-spacing: 0.4rem;
   font-weight: 500;
@@ -308,7 +311,8 @@ footer {
 
 .screenshot-container .title h1,
 .vacation-container .title h1,
-.registration-container .title h1 {
+.registration-container .title h1,
+.tips-trick-container .title h1 {
   font-size: 2.5rem;
 }
 
@@ -355,6 +359,7 @@ footer {
   font-size: 1.5rem;
   font-weight: 500;
   border: 1px solid white;
+  user-select: none;
 }
 
 .grid-item .caption p {
@@ -480,6 +485,50 @@ footer {
 
 .error-icon.hidden {
   display: none;
+}
+
+.item-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+  justify-items: center;
+  align-items: start;
+}
+
+.item-card {
+  width: 100%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  user-select: none;
+}
+.item-card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transform: scale(1.02);
+}
+
+.item-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 200px;
+}
+.item-card .item-info {
+  padding: 10px;
+  background-color: #f5f5f5;
+}
+
+.item-card .item-info h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.item-card .item-info p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #666;
+  text-align: justify;
 }
 
 @media only screen and (max-width: 1300px) {
