@@ -92,10 +92,12 @@ nav .right a:hover {
 
 .image-slider {
   position: relative;
-  width: 100%;
-  /* height: 100vh; */
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
   margin-top: 81px;
+  display: flex;
+  justify-content: center;
 }
 
 .image-slider #img {
@@ -129,10 +131,11 @@ nav .right a:hover {
 }
 
 .image-slider #img img {
-  /* width: 100%; */
+  width: 100vw;
   filter: brightness(0.5);
   vertical-align: middle;
-  background-size: cover;
+  object-fit: cover;
+  height: 100vh;
 }
 
 .image-slider #img h1 {
@@ -314,6 +317,7 @@ footer {
 .registration-container .title h1,
 .tips-trick-container .title h1 {
   font-size: 2.5rem;
+  text-align: center;
 }
 
 .grid-container {
@@ -532,59 +536,156 @@ footer {
 }
 
 @media only screen and (max-width: 1300px) {
-  nav {
-    padding: 1rem 16rem;
-  }
-  .footer-content {
-    padding: 5rem 16rem;
-  }
-}
-
-@media only screen and (max-width: 992px) {
-  .image-slider #img .content h1 {
-    font-size: 3rem;
-  }
+  /* NAV */
   nav {
     padding: 1rem 12rem;
   }
+
+  /* VACATION */
+  .card-container {
+    margin: 0 12rem;
+    margin-bottom: 1.5rem;
+  }
+  /* JOIN US */
+  .registration-container {
+    margin: 0 12rem;
+  }
+
+  /* FOOTER */
   .footer-content {
     padding: 5rem 12rem;
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 992px) {
+  /* NAV */
+  nav {
+    padding: 1rem 5rem;
+  }
+  /* HOME */
   .image-slider #img .content h1 {
-    font-size: 2rem;
+    font-size: 3rem;
   }
-  .image-slider #img button {
-    padding: 0.5rem 2rem;
-    font-size: 0.7rem;
+  /* SCREENSHOT */
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 5rem;
   }
-  .image-slider .btn-prev,
-  .image-slider .btn-next {
-    font-size: 1rem;
+
+  /* VACATION */
+  .card-container {
+    margin: 0 5rem;
+    margin-bottom: 1.5rem;
   }
+
+  /* TIPS AND TRICK */
+  .tips-trick-container {
+    margin: 0 5rem;
+  }
+
+  /* JOIN US */
+  .registration-container {
+    margin: 0 5rem;
+  }
+
+  /* FOOTER */
   .footer-content {
-    padding: 5rem 9rem;
+    padding: 5rem 5rem;
   }
 }
 
 @media only screen and (max-width: 600px) {
+  /* NAV */
+  nav {
+    padding: 1rem 2rem;
+  }
+
+  /* HOME */
   .image-slider #img .content h1 {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   .image-slider #img button {
     padding: 0.4rem 1.5rem;
     font-size: 0.5rem;
+    margin-top: 1rem;
   }
   .image-slider .btn-prev,
   .image-slider .btn-next {
     font-size: 0.5rem;
+    padding: 1rem;
   }
   .image-slider .btn-prev {
-    left: 10%;
+    left: 5%;
   }
   .image-slider .btn-next {
-    right: 10%;
+    right: 5%;
+  }
+
+  /* VACATION */
+  .card-container {
+    margin: 0 2rem;
+    margin-bottom: 1.5rem;
+  }
+  .card {
+    flex-direction: column;
+  }
+  .card img {
+    width: 100%;
+    height: 100%;
+  }
+  .card .right {
+    align-items: center;
+  }
+
+  /* JOIN US */
+  .registration-container {
+    margin: 0 2rem;
+  }
+  .registration-form {
+    padding: 2rem;
+  }
+
+  /* TIPS AND TRICK */
+  .tips-trick-container {
+    margin: 0 2rem;
+  }
+
+  .tips-trick-container .title h1 {
+    font-size: 2rem;
+  }
+
+  /* FOOTER */
+  .footer-content {
+    padding: 5rem 2rem;
+  }
+  .footer-content h1 {
+    font-size: 2rem;
+  }
+  .footer-content .social-media {
+    font-size: 0.8rem;
+    color: white;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* PAGE HEADER */
+  .page-header h3 {
+    font-size: 2.5rem;
+  }
+
+  /* SCREENSHOT */
+  .grid-container {
+    grid-template-columns: 1fr;
+    margin: 0 2rem;
+  }
+
+  /* TIPS AND TRICK */
+  .tips-trick-container .title h1 {
+    font-size: 1.5rem;
+  }
+
+  /* FOOTER */
+  .footer-content h1 {
+    font-size: 1.5rem;
   }
 }
