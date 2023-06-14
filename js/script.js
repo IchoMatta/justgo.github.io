@@ -144,7 +144,7 @@ function validateForm() {
     isValid = false;
     addressErrorIcon.classList.remove("hidden");
   } else {
-    addressError.textContent = password;
+    addressError.textContent = "";
     addressErrorIcon.classList.add("hidden");
   }
 
